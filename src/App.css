@@ -1,38 +1,265 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: Clash Display;
+	src: url('./assets/font/ClashDisplayBold.otf');
+	font-weight: 700;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+	font-family: Clash Display Regular;
+	src: url('./assets/font/ClashDisplayRegular.otf');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@font-face {
+	font-family: Clash Display Med;
+	src: url('./assets/font/ClashDisplayMedium.otf');
+}
+
+@font-face {
+	font-family: Clash Display Lig;
+	src: url('./assets/font/ClashDisplayLight.otf');
+}
+
+@font-face {
+	font-family: Clash Display semi;
+	src: url('./assets/font/ClashDisplaySemibold.otf');
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	scrollbar-width: none;
+    
+}
+
+.div-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* Hero */
+
+.hero-content{
+	position: relative;
+}
+
+.hero-content-blur-image{
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 25%;
+	height: 400px;
+	width:400px;
+}
+
+@media screen and (max-width:600px) {
+
+	body{
+		overflow: auto;
+	}
+	.hero-content-blur-image{
+	height: 250px;
+	width:250px;
+	top: 50px;
+}
+.features-content-blur-text{
+	height: 250px;
+	width:250px;
+	right: 0 !important;
+	top: 0;
+}
+.advantages-content-star-image-1,.advantages-content-star-image-2{
+	display: none;
+	}
+	.img-stack,.card-img .ellipse{
+display: none;
+	}
+}
+.hero-content-star-image{
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: -85px;
+}
+
+
+
+/* Features */
+.features-image{
+	position: relative;
+}
+.features-content-star-image{
+	position: absolute;
+	top: 0;
+	left: -85px;
+}
+.features-content-blur-image{
+	position: absolute;
+	top: -30px;
+	left: -70px;
+	z-index: -1;
+}
+.features-content{
+	position: relative;
+}
+
+.features-content-blur-text{
+position: absolute;
+z-index: -1;
+right:-400px;
+}
+
+
+/* Advanatges */
+
+.advantages-image{
+	position: relative;
+}
+.advantages-content-star-image-1{
+position: absolute;
+top: 0;
+right: -100px;
+}
+.advantages-content-blur-image-1{
+	position: absolute;
+	z-index: -1;
+	bottom: -40px;
+	left: -70px;
+}
+.advantages-content-star-image-2{
+	position: absolute;
+	top: 0;
+	right: -50px;
+}
+
+
+/* Testimonials*/
+
+.testimonial-image{
+	position: relative;
+}
+.testimonial-content-star-image{
+position: absolute;
+left: -80px;
+bottom: 40px;
+}
+.testimonial-content-blue-image{
+	position: absolute;
+	top: 50px;
+	left: -40px;
+	z-index: -1;
+}
+.testimonial-content-star-image-2{
+	top: -200px;
+	right:100px;
+}
+
+
+
+/* FAQ */
+  
+  .color-set{
+	background:#FF5555;
+	color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+	justify-content: center;
+	padding: 20px;
+	margin: 8px;
   }
-}
+  
+  .transparent-set{
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+	justify-content: center;
+	padding: 20px;
+	margin: 8px;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+
+  .transparent-set p{
+	margin-top: "10px";
   }
-}
+
+  .heading-card h1{
+	font-size: 1.5rem;
+	font-family: "Clash Display Med";
+	font-weight: 600;
+	width: 90%;
+	line-height: 28px;
+	letter-spacing: 1px;
+  }
+  
+  .card-img{
+	margin-top: 7%;
+	background: #000000;
+	border-radius: 8px;
+	overflow: hidden;
+	z-index: -1;
+	position: relative;
+    margin-bottom: 7%;
+  }
+  
+  .card-img h1{
+	margin-top:12%;
+	margin-left:10%;
+  }
+  
+  .card-img p{
+	margin-left:10%;
+	width:50%;
+	margin-top: 10px;
+  }
+  
+  .btn-apple{
+	background:white ;
+	color:black;
+	margin-left:10%;
+	margin-top: 1%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding:10px 20px;
+	font-size: 18px;
+	font-family: "Clash Display Med";
+	border-radius: 3px;
+	margin-bottom: 12%;
+  }
+  
+  .card-img .ellipse{
+	position: absolute;
+	z-index:0;
+	bottom: 0;
+  }
+  
+  .img-stack{
+	position: absolute;
+	right:0;
+	margin-top: 3%;
+	height:400px;
+	width: 400px;
+  }
+  
+  .input-bx{
+	display: flex;
+	background: #ffffff;
+	color:grey;
+	border-radius: 4px;
+	padding:10px 20px;
+  }
+  
+  .subscribe-bt{
+	background: black;
+	padding:11px 20px;
+	border-radius: 4px;
+	position:absolute;
+	top: 0;
+	right: 0;
+  }
